@@ -1,7 +1,13 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Hotel.Models\Hotel.Models.csproj" />
+    <ProjectReference Include="..\Hotel.Toools\Hotel.Toools.csproj" />
+    <ProjectReference Include="..\Hotel.ViewModels\Hotel.ViewModels.csproj" />
+  </ItemGroup>
 
 </Project>
