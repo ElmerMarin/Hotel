@@ -1,5 +1,6 @@
 ﻿using Hotel.Models;
 using Hotel.Web.Models;
+using Hotel.Toools.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -14,16 +15,19 @@ namespace Hotel.Web.Controllers
     {
         private readonly ILogger<HomeController> _logger;
         private readonly DataContextLPL _dbContext;
+        private readonly IEmailSender _emailSender;
 
-        public HomeController(ILogger<HomeController> logger,DataContextLPL dataContext)
+        public HomeController(ILogger<HomeController> logger,DataContextLPL dataContext,IEmailSender emailSender)
         {
             _logger = logger;
             _dbContext = dataContext;
+            _emailSender =emailSender;
         }
 
         public IActionResult Index()
         {
             var hoteles = _dbContext.Hoteles.Where(c => c.Estatus == true);
+            //_emailSender.SendEmailAsync("", "","");
             return View();
         }
 
