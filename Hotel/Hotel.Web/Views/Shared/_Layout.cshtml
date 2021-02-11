@@ -1,4 +1,4 @@
-﻿@inject Microsoft.AspNetCore.Http.IHttpContextAccessor  accessor;
+﻿
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,7 +39,7 @@
 
         <div class="container hidden-main">
             <div class="row">
-                <div class="col-md-2 logo">
+                @*<div class="col-md-2 logo">
                     @{ 
                         string strLogo = "~/images/header-logo-2.png";
                         if(ViewBag.Config.LogoPrincipal!=null || !string.IsNullOrEmpty(ViewBag.Config.LogoPrincipal))
@@ -48,7 +48,7 @@
                         }
                     }
                     <img src="@Url.Content(strLogo)" alt="" class="img-fluid">
-                </div>
+                </div>*@
                 <div class="col-md-10 text-right">
                     <div class="row justify-content-end d-flex">
                         <div class="col-md-9">
@@ -79,7 +79,7 @@
                                             <li class="nav-item"><a class="nav-link" href="#recomended">Activides</a></li>
                                             <li class="nav-item"><a class="nav-link" href="#popular">Blog</a></li>
                                             <li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li>
-                                            @if (!accessor.HttpContext.User.Identity.IsAuthenticated)
+                                            @*@if (!accessor.HttpContext.User.Identity.IsAuthenticated)
                                             {
                                                 <li class="nav-item"><a class="nav-link" data-toggle="modal" data-target="#loginModal">Registro / Acceso</a></li>
                                             }
@@ -87,7 +87,7 @@
                                             {
                                                 <li class="nav-item"><a class="nav-link" href="~/Panel">Panel de control</a></li>
 
-                                            }
+                                            }*@
 
                                         </ul>
                                     </div>
@@ -121,7 +121,7 @@
     </section>
     @RenderBody()
 
-    <input id="txtIp" name="ip" type="hidden" style="margin-bottom:0px" value="@accessor.HttpContext.Connection.RemoteIpAddress.ToString()">
+    @*<input id="txtIp" name="ip" type="hidden" style="margin-bottom:0px" value="@accessor.HttpContext.Connection.RemoteIpAddress.ToString()">*@
     <footer id="contact" class="contact">
         <div class="container">
             <div class="row contact-part">
