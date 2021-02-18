@@ -29,5 +29,7 @@ namespace Hotel.Models
         [ForeignKey("Hoteles")]
         public int HotelId { get; set; }
         public virtual Hoteles Hoteles { get; set; }
+
+        public virtual ICollection<ImagenesAsociadas> ImagenesAsociadas { get; set; }
     }
 }

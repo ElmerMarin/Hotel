@@ -9,7 +9,7 @@ namespace Hotel.Models
     public class Imagenes
     {
         [Key]
-        public int id { get; set; }
+        public int Id { get; set; }
         public string Imagen { get; set; }
         public string Nombre { get; set; }
         [ForeignKey("Hoteles")]

@@ -77,7 +77,7 @@ namespace Hotel.Web.Controllers
                 return RedirectToAction("Index", "Home");
             var usuario = await AutenticacionHelper.GetUsuario(HttpContext, _emailSender);
             ViewBag.Color = usuario.ColorTema == "w" ? Url.Content("~/admin/white") : Url.Content("~/admin/black");
-            var imagenes = await _dbContext.Imagenes.Where(c => c.HotelId == id && c.HabitacionId==null && c.Activo == true).Include(c => c.Imagenes).OrderByDescending(c=>c.Id).ToListAsync();
+            var imagenes = await _dbContext.ImagenesAsociadas.Where(c => c.HotelId == id && c.HabitacionId==null && c.Activo == true).Include(c => c.Imagenes).OrderByDescending(c=>c.Id).ToListAsync();
             return PartialView(imagenes);
         }
 

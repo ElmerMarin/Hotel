@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Hotel.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -19,6 +20,7 @@ namespace Hotel.Models
         public DbSet<Hoteles> Hoteles { get; set; }
         public DbSet<HotelesHabitacionCaracteristica> HotelesHabitacionCaracteristica { get; set; }
         public DbSet<Imagenes> Imagenes { get; set; }
+        public DbSet<ImagenesAsociadas> ImagenesAsociadas { get; set; }
         public DbSet<ReservaDetalle> ReservaDetalle { get; set; }
         public DbSet<Reservas> Reservas { get; set; }
         public DbSet<Servicios> Servicios { get; set; }
