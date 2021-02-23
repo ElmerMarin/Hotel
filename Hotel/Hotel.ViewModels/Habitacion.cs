@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace LaPescaEnLinea.ViewModels
+namespace Hotel.ViewModels
 {
     public class Habitacion
     {

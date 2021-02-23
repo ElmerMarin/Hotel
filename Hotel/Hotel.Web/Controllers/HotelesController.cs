@@ -82,7 +82,7 @@ namespace Hotel.Web.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> AddHotel(Hotel hotel)
+        public async Task<IActionResult> AddHotel(Hotell hotel)
         {
             try
             {

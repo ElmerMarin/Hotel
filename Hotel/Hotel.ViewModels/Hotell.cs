@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Hotel.ViewModels
 {
-    public class Hotel
+    public class Hotell
     {
 		public int Id { get; set; }
 		public string Telefono { get; set; }
